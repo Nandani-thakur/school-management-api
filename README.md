@@ -92,7 +92,7 @@ CREATE TABLE schools (
 
 ---
 
-## ▶️ Run the Server
+##  Run the Server
 
 ```
 node app.js
@@ -186,23 +186,25 @@ The database schema and API functionality remain the same and fully satisfy the 
 
 ##  Deployment
 
-The API can be deployed on platforms like:
+The API is deployed on:
 
-* Railway (recommended)
 * Render
-<<<<<<< HEAD
-=======
-* AWS
->>>>>>> 1640478 (Final README updated)
 
 ---
 
 ##  Postman Collection
 
-Include Postman collection with:
+A Postman collection is included containing:
 
-* Add School API
-* List Schools API
+* Add School API (POST)
+* List Schools API (GET)
+
+You can import it into Postman to test all endpoints easily.
+  
+### Example Live Test
+
+POST https://school-management-api-65z2.onrender.com/addSchool
+GET  https://school-management-api-65z2.onrender.com/listSchools?latitude=18.5&longitude=73.8
 
 ---
 
