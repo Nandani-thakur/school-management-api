@@ -201,10 +201,7 @@ A Postman collection is included containing:
 
 You can import it into Postman to test all endpoints easily.
   
-### Example Live Test
 
-POST https://school-management-api-65z2.onrender.com/addSchool
-GET  https://school-management-api-65z2.onrender.com/listSchools?latitude=18.5&longitude=73.8
 
 ---
 
