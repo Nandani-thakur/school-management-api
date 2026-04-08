@@ -8,7 +8,7 @@ A Node.js + Express API to manage school data and retrieve schools based on prox
 
 * Add a new school with details
 * Fetch all schools sorted by distance from user location
-* Uses MySQL database
+* Uses PostgreSQL database
 * Distance calculated using Haversine formula
 
 ---
@@ -17,7 +17,7 @@ A Node.js + Express API to manage school data and retrieve schools based on prox
 
 * Node.js
 * Express.js
-* MySQL
+* PostgreSQL
 * dotenv
 * CORS
 
@@ -36,12 +36,13 @@ school-management-api/
 │── utils/
 │   └── distance.js
 │── app.js
+│── createTable.js
 │── .env
 ```
 
 ---
 
-##  Setup Instructions
+## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
 
@@ -50,11 +51,15 @@ git clone https://github.com/Nandani-thakur/school-management-api.git
 cd school-management-api
 ```
 
+---
+
 ### 2. Install dependencies
 
 ```
 npm install
 ```
+
+---
 
 ### 3. Configure environment variables
 
@@ -62,25 +67,22 @@ Create a `.env` file:
 
 ```
 PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=School_db
+DB_HOST=your-host
+DB_USER=your-user
+DB_PASSWORD=your-password
+DB_NAME=your-database
+DB_PORT=5432
 ```
 
 ---
 
 ##  Database Setup
 
-Run these queries in MySQL:
+Run this query in PostgreSQL:
 
 ```
-CREATE DATABASE School_db;
-
-USE School_db;
-
 CREATE TABLE schools (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
     latitude FLOAT NOT NULL,
@@ -90,7 +92,7 @@ CREATE TABLE schools (
 
 ---
 
-##  Run the Server
+## ▶️ Run the Server
 
 ```
 node app.js
@@ -158,6 +160,9 @@ GET /listSchools?latitude=18.5204&longitude=73.8567
   {
     "id": 1,
     "name": "ABC School",
+    "address": "Pune",
+    "latitude": 18.5204,
+    "longitude": 73.8567,
     "distance": 0.5
   }
 ]
@@ -171,11 +176,24 @@ Distance is calculated using the **Haversine formula** to determine the shortest
 
 ---
 
+##  Database Note
+
+The original requirement specified using MySQL. However, for deployment and cloud compatibility, PostgreSQL has been used in this project.
+
+The database schema and API functionality remain the same and fully satisfy the assignment requirements.
+
+---
+
 ##  Deployment
 
 The API can be deployed on platforms like:
 
+* Railway (recommended)
 * Render
+<<<<<<< HEAD
+=======
+* AWS
+>>>>>>> 1640478 (Final README updated)
 
 ---
 
@@ -191,5 +209,3 @@ Include Postman collection with:
 ##  Author
 
 Nandani Thakur
-
----
