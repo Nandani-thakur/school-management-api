@@ -46,7 +46,7 @@ school-management-api/
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/school-management-api.git
+git clone https://github.com/Nandani-thakur/school-management-api.git
 cd school-management-api
 ```
 
