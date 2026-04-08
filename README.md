@@ -176,8 +176,6 @@ Distance is calculated using the **Haversine formula** to determine the shortest
 The API can be deployed on platforms like:
 
 * Render
-* Railway
-* AWS
 
 ---
 
